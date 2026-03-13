@@ -1,0 +1,15 @@
+class Product:
+    def __init__(self,price):
+        self.set_price(price)
+    def get_price(self):
+        return self.price
+    def set_price(self,price):
+        if price > 0:
+            self.price = price
+
+        else:
+            print('giá > 0')
+
+    def __str__(self):
+        return f"Price:{self.price}"
+
