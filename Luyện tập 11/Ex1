@@ -1,0 +1,13 @@
+chuoi = []
+for i in range(5):
+    chuoi.append(input(f"Nhập chuỗi {i+1}: "))
+for i in range(1, 5):
+    key = chuoi[i]
+    j = i - 1
+
+    while j >= 0 and len(chuoi[j]) < len(key):
+        chuoi[j + 1] = chuoi[j]
+        j -= 1
+
+    chuoi[j + 1] = key
+    print(f"Bước {i}: {chuoi}")
